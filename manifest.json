@@ -1,0 +1,16 @@
+{
+    "manifest_version": 2,
+    "name": "dfp_reporter",
+    "version": "1.0",
+    "description": "provide dijimart dfp banner report",
+    "browser_action": {
+      "default_popup": "popup.html",
+      "default_icon": "icon.jpg"
+    },
+    "permissions": [
+      "tabs"
+    ],
+    "icons" : {
+      "128": "icon.jpg"
+    }
+  }
