@@ -6,11 +6,8 @@
   "content_scripts": [
     {
       "matches": [
-        "https://qiita.com/*",
-        "https://www.digimart.net/search?*salep=on*",
-        "https://www.digimart.net/search?*shopsalep=on*",
-        "https://www.digimart.net/search?*salep=true*",
-        "https://www.digimart.net/search?*shopsalep=true*"],
+        "https://www.digimart.net/*"
+      ],
       "run_at": "document_end",
       "js": ["js/lib/jquery.min.js", "js/content.js"]
     }
