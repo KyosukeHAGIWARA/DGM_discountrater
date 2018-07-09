@@ -1,4 +1,4 @@
-// var item_list = document.getElementsByClassName("itemStateIn");
+// let item_list = document.getElementsByClassName("itemStateIn");
 // // ccc = document.getElementsByClassName("p-items_wrapper");
 // // ccc.style.backgroundColor = "red";
 //
@@ -10,34 +10,34 @@
 // //     value.insertBefore(dp, value.firstChild);
 // // });
 // //
-// // for(var i=0; i<item_list.length; i++){
+// // for(let i=0; i<item_list.length; i++){
 // //     // document.body.style.backgroundColor = "red";
 // //     item_list[i].appendChild(dp);
 // //     // item_list[i].innerHTML = "<p>hhhheeeellllllllooo</p>" ;
 // //     console.log(item_list[i]);
 // // }
 // //
-// // var parents = $('.it-Header');
+// // let parents = $('.it-Header');
 // // console.log(parents.length);
 // //
-// // for(var i=0; i<parents.length; i++){
+// // for(let i=0; i<parents.length; i++){
 // //     console.log("kita");
 // //     parents[i].after("<b>Hello</b>");
 // // }
 
 // console.log("hogo");
-var parents = $('.itemStateIn');
-for(var i=0; i<parents.length; i++){
-    var fp = parents[i].getElementsByClassName("fixedPrice");
-    var h_price = parseInt(fp[0].children[0].textContent.replace(/[^0-9^]/g,""));
+let parent = $('.itemStateIn');
+for(let i=0; i<parent.length; i++){
+    let fp = parent[i].getElementsByClassName("fixedPrice");
+    let h_price = parseInt(fp[0].children[0].textContent.replace(/[^0-9^]/g,""));
     console.log(h_price);
 
-    var lp = parents[i].getElementsByClassName("price");
-    var l_price = parseInt(lp[0].textContent.replace(/[^0-9^]/g,""));
+    let lp = parent[i].getElementsByClassName("price");
+    let l_price = parseInt(lp[0].textContent.replace(/[^0-9^]/g,""));
     console.log(l_price);
 
-    var p_down = parseInt(100 * (1 - l_price / h_price));
-    if(String(fp[0].innerHTML).indexOf("割引率") == -1){
+    let p_down = parseInt(100 * (1 - l_price / h_price));
+    if(String(fp[0].innerHTML).indexOf("割引率") === -1){
         fp[0].innerHTML = "割引率 " + String(p_down) + "%<br>" + fp[0].innerHTML;
     }else{
         console.log("dadadada");
@@ -45,22 +45,22 @@ for(var i=0; i<parents.length; i++){
 
 }
 
-var parents = $('.itemState');
+let parents = $('.itemState');
 // console.log(parents);
 // console.log("aaasss");
-for(var i=0; i<parents.length; i++){
+for(let i=0; i<parents.length; i++){
     console.log("kita");
-    var fp = parents[i].getElementsByClassName("fixedPrice");
-    var h_price = parseInt(fp[0].children[0].textContent.replace(/[^0-9^]/g,""));
+    let fp = parents[i].getElementsByClassName("fixedPrice");
+    let h_price = parseInt(fp[0].children[0].textContent.replace(/[^0-9^]/g,""));
     console.log(h_price);
 
-    var lp = parents[i].getElementsByClassName("price");
-    var l_price = parseInt(lp[0].textContent.replace(/[^0-9^]/g,""));
+    let lp = parents[i].getElementsByClassName("price");
+    let l_price = parseInt(lp[0].textContent.replace(/[^0-9^]/g,""));
     console.log(l_price);
 
-    var p_down = parseInt(100 * (1 - l_price / h_price));
+    let p_down = parseInt(100 * (1 - l_price / h_price));
     // console.log(fp[0].innerHTML);
-    if(String(fp[0].innerHTML).indexOf("割引率") == -1){
+    if(String(fp[0].innerHTML).indexOf("割引率") === -1){
         fp[0].innerHTML = "割引率 " + String(p_down) + "%<br>" + fp[0].innerHTML;
     }else{
         console.log("dadadada");
