@@ -1,16 +1,28 @@
 {
-    "manifest_version": 2,
-    "name": "dfp_reporter",
-    "version": "1.0",
-    "description": "provide dijimart dfp banner report",
-    "browser_action": {
-      "default_popup": "popup.html",
-      "default_icon": "icon.jpg"
-    },
-    "permissions": [
-      "tabs"
-    ],
-    "icons" : {
-      "128": "icon.jpg"
+  "manifest_version": 2,
+  "name": "dfp_reporter",
+  "version": "1.0",
+  "description": "provide digimart dfp banner report",
+  "content_scripts": [
+    {
+      "matches": [
+        "https://qiita.com/*",
+        "https://www.digimart.net/search?*salep=on*",
+        "https://www.digimart.net/search?*shopsalep=on*",
+        "https://www.digimart.net/search?*salep=true*",
+        "https://www.digimart.net/search?*shopsalep=true*"],
+      "run_at": "document_end",
+      "js": ["js/lib/jquery.min.js", "js/content.js"]
     }
+  ],
+  "browser_action": {
+    "default_popup": "popup.html",
+    "default_icon": "icon.jpg"
+  },
+  "permissions": [
+    "tabs"
+  ],
+  "icons" : {
+    "128": "icon.jpg"
   }
+}
