@@ -1,8 +1,11 @@
 {
   "manifest_version": 2,
-  "name": "dfp_reporter",
+  "name": "DGM_discountrater",
   "version": "1.0",
-  "description": "provide digimart dfp banner report",
+  "description": "shoe discount rate for digimart",
+  "icons" : {
+    "19": "icon.png"
+  },
   "content_scripts": [
     {
       "matches": [
@@ -14,12 +17,11 @@
   ],
   "browser_action": {
     "default_popup": "popup.html",
-    "default_icon": "icon.jpg"
-  },
-  "permissions": [
-    "tabs"
-  ],
-  "icons" : {
-    "128": "icon.jpg"
+    "default_icon": {
+      "19": "icon.png"
+    },
+    "permissions": [
+      "tabs"
+    ]
   }
 }

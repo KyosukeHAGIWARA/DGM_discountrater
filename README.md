@@ -1,7 +1,5 @@
 # DGM_discountrater
 
-
-
 ## Description
 デジマートのセール商品に割引率情報を付加するChrome Extensionです。  
 なんのひねりもない安直な名前ですね。
